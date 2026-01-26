@@ -1,0 +1,39 @@
+﻿@import 'tailwindcss';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+    --lumen-warm: 245 158 11; /* amber-500 */
+    --lumen-soft: 253 230 138; /* amber-200 */
+}
+
+:root {
+    --uprise-bg: #f6f4ef; /* page background */
+    --uprise-surface: #fbfaf7; /* cards */
+    --uprise-panel: #f8f3e8; /* large sections */
+    --uprise-border: rgba(15, 23, 42, 0.10);
+}
+
+body {
+    background: var(--uprise-bg);
+}
+
+    /* Optional: subtle “Lumen glow” from the top */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(900px 500px at 50% -200px, rgba(245, 158, 11, 0.10) 0%, rgba(253, 230, 138, 0.08) 30%, transparent 70%);
+        z-index: -1;
+    }
+
+
+
+
