@@ -85,7 +85,7 @@ export default function LumenPage() {
                             </div>
 
                             <div className="rounded-xl border border-[var(--uprise-border)] bg-[#fdfbf6] p-5">
-                                <div className="font-semibold text-slate-900">Consent-first</div>
+                                <div className="font-semibold text-slate-900">Relational Memory</div>
                                 <div className="mt-1 text-sm text-slate-600">
                                     Memory only with explicit, revocable consent.
                                 </div>
@@ -94,9 +94,16 @@ export default function LumenPage() {
                             <div className="rounded-xl border border-[var(--uprise-border)] bg-[#fdfbf6] p-5 md:col-span-1">
                                 <div className="font-semibold text-slate-900">No dark patterns</div>
                                 <div className="mt-1 text-sm text-slate-600">
-                                    No streaks. No guilt. No engagement loops.
+                                    No streaks. No guilt. No addiction loops.
                                 </div>
                             </div>
+
+                            <li className="rounded-xl border border-[var(--uprise-border)] bg-[var(--uprise-card)] p-5">
+                                <div className="font-semibold text-slate-900">Compassion-first by design</div>
+                                <p className="mt-1 text-sm text-slate-600">
+                                    Prioritises genuine emotional safety and harm reduction over any form of user retention or optimisation
+                                </p>
+                            </li>
 
                             <div className="rounded-xl border border-[var(--uprise-border)] bg-[#fdfbf6] p-5 md:col-span-2">
                                 <div className="text-sm text-slate-700">
@@ -111,6 +118,45 @@ export default function LumenPage() {
                         </div>
                     </div>
                 </section>
+
+                <section className="mt-12 rounded-2xl border border-[var(--uprise-border)] bg-[var(--uprise-panel)] p-6 shadow-sm">
+                    <div className="text-xs font-semibold tracking-widest text-slate-600">
+                        LUMEN FEATURES
+                    </div>
+
+                    <ul className="mt-5 grid gap-4 md:grid-cols-2">
+                        <li className="rounded-xl border border-[var(--uprise-border)] bg-[var(--uprise-card)] p-5">
+                            <div className="font-semibold text-slate-900">Contextual Understanding</div>
+                            <p className="mt-1 text-sm text-slate-600">
+                                Learns your patterns and preferences with explicit consent to offer more grounded, relevant support over time.
+                            </p>
+                        </li>
+
+                        <li className="rounded-xl border border-[var(--uprise-border)] bg-[var(--uprise-card)] p-5">
+                            <div className="font-semibold text-slate-900">Harm Reduction</div>
+                            <p className="mt-1 text-sm text-slate-600">
+                                Helps interrupt rumination and impulse spirals with gentle check-ins.
+                            </p>
+                        </li>
+
+                        <li className="rounded-xl border border-[var(--uprise-border)] bg-[var(--uprise-card)] p-5">
+                            <div className="font-semibold text-slate-900">Moonshot</div>
+                            <p className="mt-1 text-sm text-slate-600">
+                                Substrate for future BCI/Neuralink integrations
+                            </p>
+                        </li>
+
+                        <li className="rounded-xl border border-[var(--uprise-border)] bg-[var(--uprise-card)] p-5">
+                            <div className="font-semibold text-slate-900">Grounded Reflection</div>
+                            <p className="mt-1 text-sm text-slate-600">
+                                Helps you slow down, externalise thoughts, and see patterns clearly — without judgement or pressure.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+
+
+
 
                 {/* Early access panel (placeholder mode) */}
                 <section
@@ -159,6 +205,7 @@ export default function LumenPage() {
                         </div>
                     </div>
                 </section>
+
 
                 {/* Contact */}
                 <section className="mt-12 pb-8">

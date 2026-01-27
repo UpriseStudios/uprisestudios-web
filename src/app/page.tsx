@@ -231,6 +231,14 @@ export default function Home() {
                         <p className="mt-4 text-slate-600 leading-relaxed">
                             Because most of us have felt alone in those moments — and no one should have to.
                         </p>
+                        <p className="text-slate-600 leading-relaxed">A consent-first AI that helps with neurodivergent patterns like rumination or impulse, without exploitation.</p>
+                        <p className="mt-4 text-slate-600 leading-relaxed">
+                            <li>Protective memory: Only saves what you allow, revokes instantly</li>
+                            <li>Harm reduction: Gentle interruptions for spirals</li>
+                            <li>Zero dark patterns: No notifications, no gamification</li>
+                            <li>Civilizational hedge: Local-first, sovereign data</li>
+                            <li>Moonshot ready: Substrate for Neuralink-like integrations</li>
+                        </p>
 
                         <div className="mt-8 flex flex-wrap gap-3">
                             <a
@@ -248,6 +256,18 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+            </section>
+
+            {/* Rest of your sections (Principles, Team, Contact)  */}
+            <section className="py-20">
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Principles</h2>
+                <ul className="max-w-3xl mx-auto space-y-6 text-slate-600">
+                    <li>Protective AI: Lumen shields users from harm, with explicit consent only.</li>
+                    <li>Neurodivergent Focus: Reduces rumination, impulse — real harm reduction.</li>
+                    <li>No Dark Patterns: Calm design, no addiction loops.</li>
+                    <li>Civilizational Hedge: Local data, revoke-anytime for sovereignty.</li>
+                    <li>Long-Term Moonshot: Building for a future where AI enhances humanity.</li>
+                </ul>
             </section>
 
             {/* Contact */}
