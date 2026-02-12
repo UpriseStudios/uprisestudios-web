@@ -1,21 +1,21 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 export default function Home() {
     return (
-        <main className="min-h-screen bg-white text-slate-900">
+        <main className="min-h-screen bg-[var(--uprise-bg)] text-[var(--uprise-ink)]">
             {/* Soft background haze */}
             <div className="pointer-events-none fixed inset-0 -z-10">
-                <div className="absolute -top-24 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-slate-200/50 blur-3xl" />
-                <div className="absolute top-24 right-[-120px] h-[420px] w-[420px] rounded-full bg-indigo-200/40 blur-3xl" />
-                <div className="absolute bottom-[-140px] left-[-140px] h-[460px] w-[460px] rounded-full bg-slate-100 blur-3xl" />
+                <div className="absolute -top-24 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-amber-200/25 blur-3xl" />
+                <div className="absolute top-24 right-[-120px] h-[420px] w-[420px] rounded-full bg-amber-100/20 blur-3xl" />
+                <div className="absolute bottom-[-140px] left-[-140px] h-[460px] w-[460px] rounded-full bg-[var(--uprise-card)] blur-3xl" />
             </div>
 
 
             {/* Top bar */}
-            <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/70 backdrop-blur">
+            <header className="sticky top-0 z-50 border-b border-[var(--uprise-border)] bg-[var(--uprise-card)]/80 backdrop-blur">
                 <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
                     <div className="flex items-center gap-3">
-                        <div className="h-8 w-8 rounded-xl bg-slate-900/90" />
+                        <div className="h-8 w-8 rounded-xl bg-[var(--uprise-navy)]/90" />
                         <div className="font-semibold tracking-tight">Uprise Studios</div>
                     </div>
 
@@ -23,9 +23,8 @@ export default function Home() {
                         <a href="#mission" className="hover:text-slate-900">
                             Mission
                         </a>
-                        <a href="#products" className="hover:text-slate-900">
-                            Products
-                        </a>
+                        <a href="#products" className="hover:text-slate-900">Products</a>
+                        <Link href="/tally" className="hover:text-slate-900">Tally</Link>
                         <a href="#lumen" className="hover:text-slate-900">
                             Lumen
                         </a>
@@ -35,7 +34,7 @@ export default function Home() {
 
                         <a
                             href="#lumen"
-                            className="ml-2 rounded-xl bg-slate-900 px-4 py-2 text-xs font-medium text-white hover:bg-slate-800"
+                            className="ml-2 rounded-xl bg-[var(--uprise-navy)] px-4 py-2 text-xs font-medium text-white hover:opacity-95"
                         >
                             Coming soon
                         </a>
@@ -47,8 +46,8 @@ export default function Home() {
             <section className="mx-auto max-w-6xl px-6 pb-16 pt-14">
                 <div className="grid items-center gap-10 lg:grid-cols-12">
                     <div className="lg:col-span-7">
-                        <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/60 px-3 py-1 text-xs text-slate-600">
-                            <span className="h-1.5 w-1.5 rounded-full bg-slate-900/70" />
+                        <div className="inline-flex items-center gap-2 rounded-full border border-[var(--uprise-border)] bg-[var(--uprise-card)] px-3 py-1 text-xs text-slate-600">
+                            <span className="h-1.5 w-1.5 rounded-full bg-[var(--uprise-navy)]/70" />
                             Building calm technology across apps, books, and games
                         </div>
 
@@ -57,7 +56,7 @@ export default function Home() {
                         </h1>
 
                         <p className="mt-4 max-w-2xl text-base text-slate-600">
-                            A human-first AI studio for calm companions, creative tools, and everyday life.
+                            Uprise is a human-first AI studio creating calm, ethical digital companions and tools for emotional support, creativity, and everyday life.
                         </p>
 
 
@@ -70,13 +69,13 @@ export default function Home() {
                         <div className="mt-8 flex flex-wrap items-center gap-3">
                             <a
                                 href="#lumen"
-                                className="rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white shadow-sm hover:bg-slate-800"
+                                className="rounded-xl bg-[var(--uprise-navy)] px-5 py-3 text-sm font-medium text-white shadow-sm hover:opacity-95"
                             >
                                 Explore Lumen
                             </a>
                             <a
                                 href="#products"
-                                className="rounded-xl border border-slate-200 bg-white/70 px-5 py-3 text-sm font-medium text-slate-900 hover:border-slate-300"
+                                className="rounded-xl border border-[var(--uprise-border)] bg-[var(--uprise-card)]/80 px-5 py-3 text-sm font-medium text-slate-900 hover:border-slate-300"
                             >
                                 View products
                             </a>
@@ -88,7 +87,7 @@ export default function Home() {
 
                     {/* Hero visual (abstract, premium, zero assets) */}
                     <div className="lg:col-span-5">
-                        <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white/70 p-6 shadow-sm">
+                        <div className="relative overflow-hidden rounded-3xl border border-[var(--uprise-border)] bg-[var(--uprise-card)]/80 p-6 shadow-sm">
                             <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100" />
                             <div className="relative">
                                 <div className="text-xs font-medium tracking-wide text-slate-600">
@@ -111,7 +110,7 @@ export default function Home() {
                                     ].map((x) => (
                                         <div
                                             key={x.k}
-                                            className="rounded-2xl border border-slate-200 bg-white/70 p-4"
+                                            className="rounded-2xl border border-[var(--uprise-border)] bg-[var(--uprise-card)]/80 p-4"
                                         >
                                             <div className="text-sm font-medium">{x.k}</div>
                                             <div className="mt-1 text-xs text-slate-600">{x.v}</div>
@@ -121,7 +120,7 @@ export default function Home() {
 
                                 <a
                                     href="/lumen"
-                                    className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800"
+                                    className="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-[var(--uprise-navy)] px-5 py-3 text-sm font-medium text-white hover:opacity-95"
                                 >
                                     Open Lumen page
                                 </a>
@@ -154,7 +153,7 @@ export default function Home() {
                         ].map((x) => (
                             <div
                                 key={x.title}
-                                className="rounded-2xl border border-slate-200 bg-white/70 p-5 shadow-sm"
+                                className="rounded-2xl border border-[var(--uprise-border)] bg-[var(--uprise-card)]/80 p-5 shadow-sm"
                             >
                                 <div className="font-medium">{x.title}</div>
                                 <div className="mt-2 text-sm text-slate-600">{x.desc}</div>
@@ -198,11 +197,11 @@ export default function Home() {
                     ].map((p) => (
                         <div
                             key={p.title}
-                            className="rounded-2xl border border-slate-200 bg-white/70 p-6 shadow-sm"
+                            className="rounded-2xl border border-[var(--uprise-border)] bg-[var(--uprise-card)]/80 p-6 shadow-sm"
                         >
                             <div className="flex items-center justify-between gap-4">
                                 <div className="font-medium">{p.title}</div>
-                                <div className="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                                <div className="rounded-full bg-[var(--uprise-card)] px-3 py-1 text-xs text-slate-700">
                                     {p.tag}
                                 </div>
                             </div>
@@ -214,7 +213,7 @@ export default function Home() {
 
             {/* Lumen spotlight */}
             <section id="lumen" className="mx-auto max-w-6xl px-6 pb-16">
-                <div className="rounded-3xl border border-slate-200 bg-white/70 p-8 shadow-sm sm:p-10">
+                <div className="rounded-3xl border border-[var(--uprise-border)] bg-[var(--uprise-card)]/80 p-8 shadow-sm sm:p-10">
                     <div className="max-w-3xl">
                         <div className="text-xs font-medium tracking-wide text-slate-600">COMING SOON</div>
                         <h2 className="mt-2 text-3xl font-semibold tracking-tight">Lumen</h2>
@@ -231,25 +230,34 @@ export default function Home() {
                         <p className="mt-4 text-slate-600 leading-relaxed">
                             Because most of us have felt alone in those moments — and no one should have to.
                         </p>
+                        <p className="mt-4 text-slate-600 leading-relaxed"></p>
                         <p className="text-slate-600 leading-relaxed">A consent-first AI that helps with neurodivergent patterns like rumination or impulse, without exploitation.</p>
-                        <p className="mt-4 text-slate-600 leading-relaxed">
-                            <li>Protective memory: Only saves what you allow, revokes instantly</li>
-                            <li>Harm reduction: Gentle interruptions for spirals</li>
-                            <li>Zero dark patterns: No notifications, no gamification</li>
-                            <li>Civilizational hedge: Local-first, sovereign data</li>
-                            <li>Moonshot ready: Substrate for Neuralink-like integrations</li>
-                        </p>
+                        <ul className="mt-6 space-y-2 text-slate-700">
+                            <li>Protective memory: Only saves what you allow, revokes instantly.</li>
+
+                            <li>Harm reduction: Gentle interruptions for rumination and impulse spirals.</li>
+
+                            <li>Neurodivergent-aware: Built for minds that loop, fixate, or overload — without punishment or pressure.</li>
+
+                            <li>Protective AI: Designed to shield users from harm, not extract value or optimise behaviour.</li>
+
+                            <li>Zero dark patterns: No notifications, no gamification, no engagement tricks.</li>
+
+                            <li>Civilisational hedge: Local-first, sovereign data by default.</li>
+
+                            <li>Moonshot ready: Substrate for future Neuralink-like integrations.</li>
+                        </ul>
 
                         <div className="mt-8 flex flex-wrap gap-3">
                             <a
                                 href="/lumen"
-                                className="rounded-xl bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800"
+                                className="rounded-xl bg-[var(--uprise-navy)] px-5 py-3 text-sm font-medium text-white hover:opacity-95"
                             >
                                 Go to Lumen page
                             </a>
                             <a
                                 href="#contact"
-                                className="rounded-xl border border-slate-200 bg-white/70 px-5 py-3 text-sm font-medium text-slate-900 hover:border-slate-300"
+                                className="rounded-xl border border-[var(--uprise-border)] bg-[var(--uprise-card)]/80 px-5 py-3 text-sm font-medium text-slate-900 hover:border-slate-300"
                             >
                                 Contact
                             </a>
@@ -259,20 +267,75 @@ export default function Home() {
             </section>
 
             {/* Rest of your sections (Principles, Team, Contact)  */}
-            <section className="py-20">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Principles</h2>
-                <ul className="max-w-3xl mx-auto space-y-6 text-slate-600">
-                    <li>Protective AI: Lumen shields users from harm, with explicit consent only.</li>
-                    <li>Neurodivergent Focus: Reduces rumination, impulse — real harm reduction.</li>
-                    <li>No Dark Patterns: Calm design, no addiction loops.</li>
-                    <li>Civilizational Hedge: Local data, revoke-anytime for sovereignty.</li>
-                    <li>Long-Term Moonshot: Building for a future where AI enhances humanity.</li>
-                </ul>
+            <section className="mt-24">
+                <div className="mx-auto max-w-6xl px-6">
+                    <div className="rounded-3xl bg-[var(--uprise-panel-soft)] px-10 py-14">
+                        <div className="mx-auto max-w-4xl">
+                            <div className="text-xs font-semibold tracking-widest text-slate-600">
+                                UPRISE PRINCIPLES
+                            </div>
+
+                            <h2 className="mt-3 text-2xl font-semibold text-slate-900">
+                                Calm technology, built with care.
+                            </h2>
+
+                            <p className="mt-4 text-slate-700">
+                                Uprise exists to build small, thoughtful tools that respect the human holding the device.
+                                We design for sovereignty, emotional safety, and long-term wellbeing — not engagement,
+                                extraction, or growth at all costs.
+                            </p>
+
+                            <div className="mt-10 space-y-8">
+                                <div>
+                                    <div className="text-lg font-semibold text-slate-900">Sovereignty</div>
+                                    <p className="mt-1 text-slate-700">
+                                        People stay in control of what’s stored, remembered, and shared. Consent is explicit,
+                                        revocable, and respected by default.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <div className="text-lg font-semibold text-slate-900">Care</div>
+                                    <p className="mt-1 text-slate-700">
+                                        Trauma-informed tone. Consent-first design. No pressure mechanics, no coercive UX,
+                                        no optimisation against human vulnerability.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <div className="text-lg font-semibold text-slate-900">Craft</div>
+                                    <p className="mt-1 text-slate-700">
+                                        Simple, durable, and calm — designed to be used for years, not churned through in weeks.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <div className="text-lg font-semibold text-slate-900">Ethics over growth</div>
+                                    <p className="mt-1 text-slate-700">
+                                        No dark patterns. No data extraction. No engagement traps. We choose slower, healthier
+                                        progress over scale at any cost.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* 👇 Manifesto line — full width, centered */}
+                            <div className="mt-14">
+                                <p className="w-full text-center text-lg font-light italic text-slate-700">
+                                    We are not building technology to capture attention.
+                                    We are building technology to give it back.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
+
+
+
 
             {/* Contact */}
             <footer id="contact" className="mx-auto max-w-6xl px-6 py-14">
-                <div className="border-t border-slate-200/70 pt-8 text-sm text-slate-600">
+                <div className="border-t border-[var(--uprise-border)] pt-8 text-sm text-slate-600">
                     <p>Uprise Studios is a small, independent studio. We build slowly. We build carefully.</p>
                     <p className="mt-3">
                         📩{" "}
@@ -280,6 +343,7 @@ export default function Home() {
                             hello@uprisestudios.co.uk
                         </a>
                     </p>
+                    <p className="mt-3 text-xs text-slate-600">Privacy: <Link className="underline hover:text-slate-900" href="/privacy">privacy notices</Link></p>
                     <p className="mt-6 text-xs text-slate-500">© {new Date().getFullYear()} Uprise Studios</p>
                 </div>
             </footer>

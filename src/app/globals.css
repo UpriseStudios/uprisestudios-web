@@ -2,7 +2,13 @@
 
 :root {
     --font-inter: 'Inter', system-ui, sans-serif;
-    --uprise-bg: #f6f4ef;
+    --uprise-bg: #f6f1e8; /* warm off-white */
+    --uprise-panel: #f3ede1; /* slightly warmer section panels */
+    --uprise-card: #fbf7ef; /* card fill */
+    --uprise-border: #1f2937; /* near-black, not pure */
+    --uprise-ink: #0b1220; /* primary text */
+    --uprise-muted: #475569; /* slate text */
+    --uprise-navy: #0b1220; /* buttons/nav */
     --lumen-warm: 245 158 11; /* amber-500 */
     --lumen-soft: 253 230 138; /* amber-200 */
     --lumen-rose: 244 63 94; /* rose-500 for Lumen accents */
