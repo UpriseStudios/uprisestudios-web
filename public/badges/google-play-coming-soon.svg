@@ -1,0 +1,24 @@
+<svg width="180" height="56" viewBox="0 0 180 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="56" rx="14" fill="#0B1220"></rect>
+  <rect x="1" y="1" width="178" height="54" rx="13" stroke="rgba(255,255,255,0.12)"></rect>
+
+  <!-- Play icon -->
+  <g transform="translate(18,14)">
+    <path d="M0 0 L20 14 L0 28 Z" fill="url(#playGradient)"></path>
+  </g>
+
+  <text x="52" y="22" fill="rgba(234,242,255,0.65)" font-size="11" font-family="system-ui, -apple-system, sans-serif">
+    COMING SOON ON
+  </text>
+
+  <text x="52" y="38" fill="#EAF2FF" font-size="16" font-weight="600" font-family="system-ui, -apple-system, sans-serif">
+    Google Play
+  </text>
+
+  <defs>
+    <linearGradient id="playGradient" x1="0" y1="0" x2="20" y2="28">
+      <stop stop-color="#1EFFDD"></stop>
+      <stop offset="1" stop-color="#8B5CF6"></stop>
+    </linearGradient>
+  </defs>
+</svg>

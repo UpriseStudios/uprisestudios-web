@@ -11,19 +11,24 @@ export const metadata = {
 
 const CONTACT_EMAIL = "tally@uprisestudios.co.uk";
 
-// Change when ready:
+// Update when ready:
 const BETA_LINK = "/tally/beta"; // or your Play closed-test link
 const PRIVACY_LINK = "/privacy"; // or /tally/privacy
 
-// Screenshot paths (put these in /public/tally/)
-const SHOTS = {
+// Screenshot + asset paths (place these in /public/)
+const ASSETS = {
+  icon: "/tally/icon.png",
+
   heroToday: "/tally/today-manual.png",
   heroRunway: "/tally/runway.png",
-  showcaseInsights: "/tally/insights.png",
-  showcaseForesights: "/tally/foresights.png",
-  showcaseRunway: "/tally/runway.png",
-  showcasePrivacy: "/tally/privacy-model-change.png",
-  icon: "/tally/icon.png", // your Tally icon
+
+  insights: "/tally/insights.png",
+  foresights: "/tally/foresights.png",
+  privacy: "/tally/privacy-model-change.png",
+
+  // Optional (only if you add them)
+  playBadge: "/badges/google-play-coming-soon.svg",
+  appStoreBadge: "/badges/app-store-coming-soon.svg",
 };
 
 export default function TallyPage() {
@@ -34,14 +39,21 @@ export default function TallyPage() {
         <div className="absolute -top-48 left-1/2 h-[560px] w-[560px] -translate-x-1/2 rounded-full bg-[rgba(30,255,221,0.18)] blur-[90px]" />
         <div className="absolute -bottom-56 right-[-120px] h-[620px] w-[620px] rounded-full bg-[rgba(136,77,255,0.12)] blur-[110px]" />
         <div className="absolute inset-0 bg-[radial-gradient(1000px_600px_at_50%_0%,rgba(255,255,255,0.06),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(7,11,18,0.10),rgba(7,11,18,0.80))]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(7,11,18,0.10),rgba(7,11,18,0.86))]" />
       </div>
 
       {/* Header */}
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
         <Link href="/" className="flex items-center gap-3">
           <div className="grid h-11 w-11 place-items-center rounded-2xl bg-[rgba(255,255,255,0.06)] ring-1 ring-[rgba(255,255,255,0.10)]">
-            <Image src={SHOTS.icon} alt="Tally" width={30} height={30} className="rounded-xl" />
+            <Image
+              src={ASSETS.icon}
+              alt="Tally"
+              width={30}
+              height={30}
+              className="rounded-xl"
+              priority
+            />
           </div>
           <div className="leading-tight">
             <div className="text-sm font-semibold tracking-tight">Uprise Studios</div>
@@ -57,10 +69,10 @@ export default function TallyPage() {
             Product
           </a>
           <a
-            href="#features"
+            href="#difference"
             className="rounded-full px-3 py-2 text-[rgba(234,242,255,0.78)] hover:bg-[rgba(255,255,255,0.06)]"
           >
-            Features
+            Why Tally
           </a>
           <a
             href="#privacy"
@@ -74,6 +86,7 @@ export default function TallyPage() {
           >
             Beta
           </a>
+
           <Link
             href={BETA_LINK}
             className="rounded-full bg-[rgba(30,255,221,0.14)] px-4 py-2 font-semibold text-[rgba(234,242,255,0.95)] ring-1 ring-[rgba(30,255,221,0.30)] hover:bg-[rgba(30,255,221,0.20)]"
@@ -87,7 +100,7 @@ export default function TallyPage() {
       <section className="mx-auto max-w-6xl px-6 pb-12 pt-6">
         <div className="grid items-center gap-10 md:grid-cols-[1fr_1.2fr]">
           {/* Left */}
-          <div>
+          <div className="animate-[fadeInUp_0.8s_ease-out]">
             <div className="inline-flex items-center gap-2 rounded-full bg-[rgba(255,255,255,0.06)] px-3 py-1 text-xs text-[rgba(234,242,255,0.78)] ring-1 ring-[rgba(255,255,255,0.10)]">
               <span className="h-2 w-2 rounded-full bg-[rgba(30,255,221,0.95)]" />
               Privacy-first finance • Local-first by default
@@ -97,9 +110,9 @@ export default function TallyPage() {
               Understand your money — calmly.
             </h1>
 
-            <p className="mt-4 max-w-xl text-lg leading-relaxed text-[rgba(234,242,255,0.72)]">
-              See what’s safe to spend, spot issues early, and plan the month without ads, trackers,
-              or judgement. Works offline. Sync is optional and end-to-end encrypted.
+            <p className="mt-4 max-w-xl text-lg leading-relaxed text-[rgba(234,242,255,0.82)]">
+              See what’s safe to spend, spot issues early, and plan the month without ads,
+              trackers, or judgement. Works offline. Sync is optional and end-to-end encrypted.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -116,17 +129,21 @@ export default function TallyPage() {
               >
                 Privacy promise
               </a>
+            </div>
 
+            {/* Contact as trust badge */}
+            <div className="mt-4 text-sm text-[rgba(234,242,255,0.55)]">
+              Contact:{" "}
               <a
-                href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Tally Beta — I’d like to help test")}`}
-                className="rounded-2xl bg-[rgba(255,255,255,0.04)] px-5 py-3 font-semibold text-[rgba(234,242,255,0.80)] ring-1 ring-[rgba(255,255,255,0.10)] hover:bg-[rgba(255,255,255,0.07)]"
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="text-[rgba(30,255,221,0.95)] hover:underline"
               >
-                Email: {CONTACT_EMAIL}
+                {CONTACT_EMAIL}
               </a>
             </div>
 
             {/* Trust strip */}
-            <div className="mt-6 text-sm text-[rgba(234,242,255,0.55)]">
+            <div className="mt-5 text-sm text-[rgba(234,242,255,0.55)]">
               Private by default. No ads. No data selling.
             </div>
 
@@ -148,10 +165,16 @@ export default function TallyPage() {
                 </span>
               ))}
             </div>
+
+            {/* Optional store badges (only if files exist) */}
+            <div className="mt-6 flex flex-wrap gap-3 opacity-80">
+              <SafeBadge src={ASSETS.playBadge} alt="Google Play — coming soon" />
+              <SafeBadge src={ASSETS.appStoreBadge} alt="App Store — coming soon" />
+            </div>
           </div>
 
           {/* Right: Hero screenshots */}
-          <div className="relative">
+          <div className="relative animate-[fadeInUp_0.9s_ease-out]">
             <div className="rounded-3xl bg-[rgba(255,255,255,0.06)] p-6 ring-1 ring-[rgba(255,255,255,0.06)]">
               <div className="flex items-center justify-between">
                 <div>
@@ -166,8 +189,8 @@ export default function TallyPage() {
               </div>
 
               <div className="mt-6 grid gap-5 md:grid-cols-2">
-                <PhoneShot src={SHOTS.heroToday} label="Today (Manual mode)" maxW={300} />
-                <PhoneShot src={SHOTS.heroRunway} label="Runway" maxW={300} />
+                <PhoneShot src={ASSETS.heroToday} label="Today (Manual mode)" maxW={300} />
+                <PhoneShot src={ASSETS.heroRunway} label="Runway" maxW={300} />
               </div>
 
               <div className="mt-5 rounded-2xl bg-[rgba(0,0,0,0.22)] p-4 ring-1 ring-[rgba(255,255,255,0.08)]">
@@ -190,8 +213,8 @@ export default function TallyPage() {
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">The product, at a glance</h2>
             <p className="mt-2 max-w-3xl text-[rgba(234,242,255,0.70)]">
-              Everything you see here is real. Tally computes insights on-device and keeps privacy
-              explicit — not buried in fine print.
+              Everything you see here is real. Tally computes insights on-device and keeps privacy explicit
+              — not buried in fine print.
             </p>
           </div>
 
@@ -210,7 +233,7 @@ export default function TallyPage() {
             desc="Foresights, patterns, subscriptions, categories — computed locally."
             accent="teal"
           >
-            <WideShot src={SHOTS.showcaseInsights} />
+            <WideShot src={ASSETS.insights} />
           </ShowcaseCard>
 
           <ShowcaseCard
@@ -219,7 +242,7 @@ export default function TallyPage() {
             desc="Buffer low, spending accelerating, income changes — surfaced early."
             accent="purple"
           >
-            <WideShot src={SHOTS.showcaseForesights} />
+            <WideShot src={ASSETS.foresights} />
           </ShowcaseCard>
 
           <ShowcaseCard
@@ -228,7 +251,7 @@ export default function TallyPage() {
             desc="Device-only by default. If you enable sync, encryption happens before upload."
             accent="gold"
           >
-            <WideShot src={SHOTS.showcasePrivacy} />
+            <WideShot src={ASSETS.privacy} />
           </ShowcaseCard>
         </div>
 
@@ -252,12 +275,45 @@ export default function TallyPage() {
         </div>
       </section>
 
+      {/* How Tally is different */}
+      <section id="difference" className="mx-auto max-w-6xl px-6 py-12">
+        <h2 className="text-2xl font-semibold tracking-tight">How Tally is different</h2>
+        <p className="mt-2 max-w-3xl text-[rgba(234,242,255,0.70)]">
+          Most finance apps are built around tracking, ads, and nudges. Tally is built around calm clarity —
+          with privacy as a first-class feature.
+        </p>
+
+        <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <Pillar
+            title="Local-first by default"
+            desc="Your data stays on your device. No background uploads. No silent analytics."
+            tag="Sovereignty"
+          />
+          <Pillar
+            title="Runway beats budgets"
+            desc="Instead of guilt-driven budgets, Tally shows what’s safe to spend and what’s coming next."
+            tag="Clarity"
+          />
+          <Pillar
+            title="Privacy is a feature"
+            desc="If you enable sync, encryption happens on-device first. Server stores ciphertext only."
+            tag="Trust"
+          />
+        </div>
+
+        <div className="mt-6 rounded-3xl bg-[rgba(0,0,0,0.22)] p-6 ring-1 ring-[rgba(255,255,255,0.08)]">
+          <div className="text-sm font-semibold">The promise</div>
+          <div className="mt-2 text-sm text-[rgba(234,242,255,0.70)]">
+            No shame. No manipulation. No selling your data. Just a calm financial picture you can trust.
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
       <section id="features" className="mx-auto max-w-6xl px-6 py-12">
         <h2 className="text-2xl font-semibold tracking-tight">What Tally helps with</h2>
         <p className="mt-2 max-w-2xl text-[rgba(234,242,255,0.70)]">
-          Built to be calm and clear — with powerful forecasting, recurring bills, and privacy-first
-          defaults.
+          Built to be calm and clear — with powerful forecasting, recurring bills, and privacy-first defaults.
         </p>
 
         <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -286,7 +342,7 @@ export default function TallyPage() {
           />
           <Feature
             title="Mood & money (optional)"
-            desc="A gentle layer for financial wellbeing — no judgement, no manipulation."
+            desc="A gentle layer for wellbeing — no judgement, no manipulation."
           />
         </div>
       </section>
@@ -297,8 +353,8 @@ export default function TallyPage() {
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">Privacy promise</h2>
             <p className="mt-2 max-w-3xl text-[rgba(234,242,255,0.72)]">
-              Device-only by default. If you enable multi-device sync, your data is encrypted on-device
-              before upload and stored as ciphertext only.
+              Device-only by default. If you enable multi-device sync, your data is encrypted on-device before upload
+              and stored as ciphertext only.
             </p>
           </div>
 
@@ -328,8 +384,8 @@ export default function TallyPage() {
         <div className="rounded-3xl bg-[rgba(255,255,255,0.06)] p-8 ring-1 ring-[rgba(255,255,255,0.10)]">
           <h2 className="text-2xl font-semibold tracking-tight">Join the closed beta</h2>
           <p className="mt-2 max-w-3xl text-[rgba(234,242,255,0.72)]">
-            Looking for ~100 testers who care about privacy and calm design. During beta, everyone gets
-            full Pro access so we can focus on stability and premium polish.
+            Looking for ~100 testers who care about privacy and calm design. During beta, everyone gets full Pro access
+            so we can focus on stability and premium polish.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -375,20 +431,24 @@ export default function TallyPage() {
   );
 }
 
-function PhoneShot({
-  src,
-  label,
-  maxW,
-}: {
-  src: string;
-  label: string;
-  maxW: number;
-}) {
+/** --- Components --- */
+
+function SafeBadge({ src, alt }: { src: string; alt: string }) {
+  // If you don't add these files, this still renders but the image will 404.
+  // Remove this component usage if you don't want placeholders.
   return (
-    <div className="rounded-2xl bg-[rgba(0,0,0,0.20)] p-4 ring-1 ring-[rgba(255,255,255,0.08)]">
+    <div className="rounded-xl bg-[rgba(255,255,255,0.04)] px-3 py-2 ring-1 ring-[rgba(255,255,255,0.08)]">
+      <Image src={src} alt={alt} width={160} height={48} />
+    </div>
+  );
+}
+
+function PhoneShot({ src, label, maxW }: { src: string; label: string; maxW: number }) {
+  return (
+    <div className="rounded-2xl bg-[rgba(0,0,0,0.35)] p-4 ring-1 ring-[rgba(255,255,255,0.12)] shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
       <div className="mb-3 text-xs font-semibold text-[rgba(234,242,255,0.72)]">{label}</div>
       <div
-        className="relative mx-auto aspect-[9/19] w-full overflow-hidden rounded-3xl ring-1 ring-[rgba(255,255,255,0.10)]"
+        className="relative mx-auto aspect-[9/19] w-full overflow-hidden rounded-3xl ring-1 ring-[rgba(255,255,255,0.18)]"
         style={{ maxWidth: `${maxW}px` }}
       >
         <Image src={src} alt={label} fill className="object-cover" sizes={`${maxW}px`} />
@@ -399,14 +459,8 @@ function PhoneShot({
 
 function WideShot({ src }: { src: string }) {
   return (
-    <div className="relative mt-4 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[rgba(0,0,0,0.20)] ring-1 ring-[rgba(255,255,255,0.08)]">
-      <Image
-        src={src}
-        alt=""
-        fill
-        className="object-cover"
-        sizes="(max-width: 1024px) 100vw, 33vw"
-      />
+    <div className="relative mt-4 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-[rgba(0,0,0,0.28)] ring-1 ring-[rgba(255,255,255,0.10)] shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
+      <Image src={src} alt="" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
     </div>
   );
 }
@@ -440,7 +494,9 @@ function ShowcaseCard({
 
   return (
     <div
-      className={`group rounded-3xl bg-[rgba(255,255,255,0.06)] p-6 ring-1 ring-[rgba(255,255,255,0.10)] ${accentRing} transition hover:bg-[rgba(255,255,255,0.07)]`}
+      className={`group rounded-3xl bg-[rgba(255,255,255,0.06)] p-6 ring-1 ring-[rgba(255,255,255,0.10)] ${accentRing}
+      transition duration-300 hover:bg-[rgba(255,255,255,0.08)] hover:-translate-y-[2px]
+      hover:shadow-[0_20px_60px_rgba(0,0,0,0.35)]`}
     >
       <div className="flex items-center gap-2">
         <span className={`h-2 w-2 rounded-full ${accentDot}`} />
@@ -469,6 +525,26 @@ function Feature({ title, desc }: { title: string; desc: string }) {
   return (
     <div className="rounded-3xl bg-[rgba(255,255,255,0.06)] p-6 ring-1 ring-[rgba(255,255,255,0.10)]">
       <div className="text-lg font-semibold">{title}</div>
+      <div className="mt-2 text-sm leading-relaxed text-[rgba(234,242,255,0.72)]">{desc}</div>
+    </div>
+  );
+}
+
+function PillTag({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="rounded-full bg-[rgba(30,255,221,0.12)] px-3 py-1 text-xs font-semibold text-[rgba(234,242,255,0.88)] ring-1 ring-[rgba(30,255,221,0.22)]">
+      {children}
+    </span>
+  );
+}
+
+function Pillar({ title, desc, tag }: { title: string; desc: string; tag: string }) {
+  return (
+    <div className="rounded-3xl bg-[rgba(255,255,255,0.06)] p-6 ring-1 ring-[rgba(255,255,255,0.10)]">
+      <div className="flex items-start justify-between gap-4">
+        <div className="text-lg font-semibold">{title}</div>
+        <PillTag>{tag}</PillTag>
+      </div>
       <div className="mt-2 text-sm leading-relaxed text-[rgba(234,242,255,0.72)]">{desc}</div>
     </div>
   );

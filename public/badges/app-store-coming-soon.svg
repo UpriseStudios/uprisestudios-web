@@ -1,0 +1,25 @@
+<svg width="180" height="56" viewBox="0 0 180 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="56" rx="14" fill="#0B1220"></rect>
+  <rect x="1" y="1" width="178" height="54" rx="13" stroke="rgba(255,255,255,0.12)"></rect>
+
+  <!-- Apple icon -->
+  <g transform="translate(20,14)" fill="url(#appleGradient)">
+    <path d="M12 0C10.5 1.8 9.5 3.5 9.7 5.3C11.7 5.5 13.4 4.3 14.7 2.7C16 1.1 16.9 -0.7 16.7 -2.5C14.8 -2.6 13.4 -1.8 12 0Z"></path>
+    <path d="M16 6C14.5 6 13.8 7 12.6 7C11.4 7 10.5 6 9 6C6.5 6 4 8.1 4 12C4 15.6 6.6 20 9.4 20C10.7 20 11.4 19.2 12.7 19.2C14 19.2 14.6 20 16 20C18.7 20 21 15.7 21 12.3C21 9.2 18.7 6 16 6Z"></path>
+  </g>
+
+  <text x="52" y="22" fill="rgba(234,242,255,0.65)" font-size="11" font-family="system-ui, -apple-system, sans-serif">
+    COMING SOON ON
+  </text>
+
+  <text x="52" y="38" fill="#EAF2FF" font-size="16" font-weight="600" font-family="system-ui, -apple-system, sans-serif">
+    App Store
+  </text>
+
+  <defs>
+    <linearGradient id="appleGradient" x1="0" y1="0" x2="24" y2="24">
+      <stop stop-color="#1EFFDD"></stop>
+      <stop offset="1" stop-color="#8B5CF6"></stop>
+    </linearGradient>
+  </defs>
+</svg>
