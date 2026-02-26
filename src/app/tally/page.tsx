@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Tally — Privacy-first finance | Uprise Studios",
+  title: "Tally — Privacy first finance | Uprise Studios",
   description:
-    "A calm, privacy-first way to understand your money. Local first by default, runway forecasting, recurring bills, and optional end-to-end encrypted sync.",
+    "A calm, privacy first way to understand your money. Local first by default, runway forecasting, recurring bills, and optional end to end encrypted sync.",
 };
 
 const CONTACT_EMAIL = "tally@uprisestudios.co.uk";
@@ -50,7 +50,7 @@ export default function TallyPage() {
           <div>
             <h2 className="text-2xl font-semibold tracking-tight">The product, at a glance</h2>
             <p className="mt-2 max-w-3xl text-[rgba(234,242,255,0.72)]">
-              Real screens. On-device insights. Privacy explained clearly.
+              Real screens. On device insights. Privacy explained clearly.
             </p>
           </div>
 
@@ -87,7 +87,7 @@ export default function TallyPage() {
             <div>
               <div className="text-sm font-semibold">Premium from the first moment</div>
               <div className="mt-1 text-sm text-[rgba(234,242,255,0.70)]">
-                A finance tool should feel calm, trustworthy, and clear — instantly.
+                A finance tool should feel calm, trustworthy, and clear. Instantly.
               </div>
             </div>
             <div className="flex flex-wrap gap-2">
@@ -127,7 +127,7 @@ export default function TallyPage() {
       <section id="features" className="mx-auto max-w-6xl px-6 py-12">
         <h2 className="text-2xl font-semibold tracking-tight">What Tally helps with</h2>
         <p className="mt-2 max-w-2xl text-[rgba(234,242,255,0.72)]">
-          Built to be calm and clear — with forecasting, recurring bills, and privacy-first defaults.
+          Built to be calm and clear with forecasting, recurring bills, and privacy first defaults.
         </p>
 
         <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -496,11 +496,11 @@ function HeroCopy() {
         Privacy-first finance • Local-first by default
       </div>
 
-      <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">Understand your money — calmly.</h1>
+      <h1 className="mt-5 text-4xl font-semibold tracking-tight md:text-5xl">Understand your money calmly and clearly.</h1>
 
       <p className="mt-4 max-w-xl text-lg leading-relaxed text-[rgba(234,242,255,0.84)]">
         See what’s safe to spend, spot issues early, and plan the month without ads, trackers, or judgement.
-        Works offline. Sync is optional and end-to-end encrypted.
+        Works offline. Sync is optional and end to end encrypted.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-3">
