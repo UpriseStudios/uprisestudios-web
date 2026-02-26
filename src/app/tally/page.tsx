@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata = {
   title: "Tally — Privacy-first finance | Uprise Studios",
   description:
-    "A calm, privacy-first way to understand your money. Local-first by default, runway forecasting, recurring bills, and optional end-to-end encrypted sync.",
+    "A calm, privacy-first way to understand your money. Local first by default, runway forecasting, recurring bills, and optional end-to-end encrypted sync.",
 };
 
 const CONTACT_EMAIL = "tally@uprisestudios.co.uk";
@@ -63,13 +63,13 @@ export default function TallyPage() {
         </div>
 
         <div className="mt-8 grid gap-5 lg:grid-cols-3">
-          <ShowcaseCard kicker="Insights" title="Your financial picture, on-device" desc="Foresights, patterns, subscriptions — computed locally." accent="teal">
+          <ShowcaseCard kicker="Insights" title="Your financial picture, on device" desc="Foresights, patterns, subscriptions all computed locally." accent="teal">
             <div className="mt-5">
               <ScreenTeaser src={ASSETS.insights} alt="Insights screen" accent="teal" />
             </div>
           </ShowcaseCard>
 
-          <ShowcaseCard kicker="Foresights" title="Warnings before problems happen" desc="Buffer low, spending accelerating, income changes — surfaced early." accent="purple">
+          <ShowcaseCard kicker="Foresights" title="Warnings before problems happen" desc="Buffer low, spending accelerating, income changes all surfaced early." accent="purple">
             <div className="mt-5">
               <ScreenTeaser src={ASSETS.foresights} alt="Foresights screen" accent="purple" />
             </div>
@@ -111,8 +111,8 @@ export default function TallyPage() {
 
         <div className="mt-8 grid gap-5 md:grid-cols-3">
           <Pillar title="Local-first by default" desc="Your data stays on your device. No background uploads. No silent analytics." tag="Sovereignty" />
-          <Pillar title="Runway beats budgets" desc="Instead of guilt-driven budgets, Tally shows what’s safe to spend and what’s coming next." tag="Clarity" />
-          <Pillar title="Privacy is a feature" desc="If you enable sync, encryption happens on-device first. Server stores ciphertext only." tag="Trust" />
+          <Pillar title="Runway beats budgets" desc="Instead of guilt driven budgets, Tally shows what’s safe to spend and what’s coming next." tag="Clarity" />
+          <Pillar title="Privacy is a feature" desc="If you enable sync, encryption happens on device first. Server stores ciphertext only." tag="Trust" />
         </div>
 
         <div className="mt-6 rounded-3xl bg-[rgba(0,0,0,0.22)] p-6 ring-1 ring-[rgba(255,255,255,0.08)]">
@@ -133,13 +133,13 @@ export default function TallyPage() {
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           <Feature title="Runway & foresight" desc="Know what’s safe to spend and get early warnings before problems happen." />
           <Feature title="Recurring bills & salary" desc="Set up direct debits and paydays so your month is predictable." />
-          <Feature title="Manual first, bank optional" desc="Track privately with manual entries — connect a bank only if you want." />
+          <Feature title="Manual first, bank optional" desc="Track privately with manual entries. Connect a bank only if you want." />
         </div>
 
         <div className="mt-8 grid gap-4 md:grid-cols-3">
-          <Feature title="Cash-flow calendar" desc="See bills and income plotted against your balance — always know what’s coming." />
+          <Feature title="Cash-flow calendar" desc="See bills and income plotted against your balance, always know what’s coming." />
           <Feature title="Subscriptions & ROI" desc="Understand recurring costs and what’s worth keeping." />
-          <Feature title="Mood & money (optional)" desc="A gentle wellbeing layer — no judgement, no manipulation." />
+          <Feature title="Mood & money (optional)" desc="A gentle wellbeing layer, no judgement, no manipulation." />
         </div>
       </section>
 
@@ -190,8 +190,8 @@ export default function TallyPage() {
             <div className="text-sm font-semibold">What we do (and don’t do)</div>
             <ul className="mt-4 space-y-3 text-sm text-[rgba(234,242,255,0.72)]">
               <li className="flex gap-2"><Check /> No ads, no trackers, no third-party analytics.</li>
-              <li className="flex gap-2"><Check /> Local-first by default — works offline.</li>
-              <li className="flex gap-2"><Check /> Sync is optional and end-to-end encrypted.</li>
+              <li className="flex gap-2"><Check /> Local first by default. Works offline.</li>
+              <li className="flex gap-2"><Check /> Sync is optional and end to end encrypted.</li>
               <li className="flex gap-2"><Check /> You can disable sync at any time.</li>
               <li className="flex gap-2"><Warn /> Cloud provider stores encrypted data (cannot read it).</li>
             </ul>
