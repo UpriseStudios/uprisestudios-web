@@ -5,11 +5,11 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-    title: "Uprise Studios — Calm, Human-Sovereign Technology",
-    description: "Building Lumen: A calm AI companion for neurodivergent harm reduction. Protective, consent-first tech.",
+    title: "Uprise Studios — Familiar by design. Different by nature.",
+    description: "Independent software, games and creative experiences. Thoughtful technology with humanity at its core.",
     openGraph: {
         title: "Uprise Studios",
-        description: "Calm AI for real human flourishing.",
+        description: "Independent software, games and creative experiences.",
         images: "/og-image.png", // add a 1200x630 image later
         url: "https://uprisestudios.co.uk",
     },
