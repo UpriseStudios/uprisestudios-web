@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MobileNavigation from "./mobile-navigation";
 
 const groups = [
   { id: "companions", number: "01", title: "Companions & wellbeing", description: "Thoughtful tools for the moments that matter.", items: [{name:"Lumen",note:"A protective, consent-first AI companion",href:"/lumen",status:"In development"},{name:"Anchor",note:"A quiet place to find your footing",status:"Rolling out"},{name:"Ember",note:"Small steps, renewed momentum",status:"Available"},{name:"Unsent",note:"Space for the words you don't send",status:"In development"}]},
@@ -20,12 +21,12 @@ export default function V2Home() {
           <a href="#products" className="hover:text-white">Products</a><Link href="/games" className="hover:text-white">Games</Link><Link href="/desktop" className="hover:text-white">Desktop</Link><Link href="/about" className="hover:text-white">About</Link><Link href="/journal" className="hover:text-white">Studio Notes</Link>
         </nav>
         <a href="#explore" className="hidden rounded-full border border-[#c8ad87]/60 px-5 py-2.5 text-xs font-semibold uppercase tracking-[.12em] text-[#e6d2b5] hover:bg-[#c8ad87]/10 md:inline-flex">Explore Uprise <span className="ml-3">↗</span></a>
-        <details className="relative md:hidden"><summary className="cursor-pointer list-none rounded-full border border-white/20 px-4 py-2 text-sm">Menu</summary><nav aria-label="Mobile navigation" className="absolute right-0 top-12 flex w-48 flex-col gap-4 rounded-xl border border-white/15 bg-[#1c252e] p-5 text-sm shadow-2xl"><a href="#products">Products</a><Link href="/games">Games</Link><Link href="/desktop">Desktop</Link><Link href="/about">About</Link><Link href="/journal">Studio Notes</Link><Link href="/contact">Contact</Link><a href="#explore">Explore Uprise</a></nav></details>
+        <MobileNavigation />
       </div>
     </header>
     <section className="relative isolate overflow-hidden border-b border-white/10">
       <img src="/uprise-cat-silhouette.webp" alt="" aria-hidden="true" className="pointer-events-none absolute -right-24 top-0 -z-10 h-[440px] w-[520px] object-contain opacity-[.055] grayscale lg:right-[2%] lg:h-[580px] lg:w-[580px]" />
-      <div className="mx-auto max-w-7xl px-6 pb-16 pt-16 lg:px-10 lg:pb-20 lg:pt-20">
+      <div className="mx-auto max-w-7xl px-6 pb-12 pt-16 lg:px-10 lg:pb-20 lg:pt-20">
         <div className="mb-6 flex items-center gap-4 text-[11px] font-semibold uppercase tracking-[.28em] text-[#c8ad87]"><span className="h-px w-10 bg-[#c8ad87]" /> Independent by nature</div>
         <h1 className="max-w-5xl font-serif text-[clamp(3.2rem,6.5vw,6.2rem)] leading-[1.04] tracking-[-.055em]">Familiar by design.<br/><em className="font-normal text-[#c8ad87]">Different by nature.</em></h1>
         <p className="mt-7 max-w-xl text-lg leading-8 text-[#b7b8b6]">Independent software, games and creative experiences. Thoughtful technology with humanity at its core.</p>
