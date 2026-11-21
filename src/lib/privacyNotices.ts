@@ -25,20 +25,29 @@ export const PRIVACY_NOTICES: Record<AppKey, PrivacyNotice> = {
     key: "uprise",
     name: "Uprise Studios",
     summary:
-      "We keep this website simple. No tracking-by-default, no ad tech, and no selling of data.",
-    lastUpdated: "2026-01-26",
+      "The studio website provides product information and optional early-access registration. Advertising is not currently integrated.",
+    lastUpdated: "2026-11-21",
     contactEmail: CONTACT,
     sections: [
       {
         title: "What we collect",
         body: [
           "Website analytics: none by default. If we add analytics later, it will be privacy-preserving and disclosed here.",
-          "Contact emails: if you email us, we receive your email and any content you send.",
+          "Contact emails: if you email us, we receive your address and the content you send.",
+          "Lumen early-access registration: submitted email addresses are stored encrypted alongside a one-way hash used for duplicate detection.",
+          "Hosting providers may process technical request logs to operate and secure the site.",
         ],
       },
       {
         title: "How we use it",
-        body: ["To respond to your message and operate the website."],
+        body: ["To respond to enquiries, manage requested early-access notifications and operate and protect the website."],
+      },
+      {
+        title: "Advertising and cookies",
+        body: [
+          "Google AdSense is not currently integrated on this website. Before introducing advertising or non-essential tracking, we will update this notice and implement required consent controls.",
+          "Any essential technical storage and external services will be assessed as part of our deployment audit.",
+        ],
       },
       {
         title: "Your rights",
