@@ -2,12 +2,16 @@ import { NextResponse } from "next/server";
 import Stripe from "stripe";
 import { STRIPE_PRICE_IDS, type BuyMode } from "@/lib/stripePriceMap";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2026-02-25.clover",
-});
-
 export async function POST(req: Request) {
   try {
+    if (process.env.MARKETPLACE_ENABLED !== "true") {
+      return NextResponse.json({ error: "Marketplace is unavailable" }, { status: 404 });
+    }
+    const secret = process.env.STRIPE_SECRET_KEY;
+    if (!secret) {
+      return NextResponse.json({ error: "Checkout is not configured" }, { status: 503 });
+    }
+    const stripe = new Stripe(secret, { apiVersion: "2026-02-25.clover" });
     const body = await req.json().catch(() => null);
 
     const kind = body?.kind as "product" | "bundle" | undefined;
