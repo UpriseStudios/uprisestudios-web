@@ -10,7 +10,6 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Uprise Studios",
         description: "Independent software, games and creative experiences.",
-        images: "/og-image.png", // add a 1200x630 image later
         url: "https://uprisestudios.co.uk",
     },
 };
