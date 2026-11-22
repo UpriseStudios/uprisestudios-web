@@ -11,8 +11,8 @@ export const metadata = {
 const CONTACT_EMAIL = "tally@uprisestudios.co.uk";
 
 // Update these when ready:
-const BETA_LINK = "/tally/beta";
-const PRIVACY_LINK = "/tally/privacy";
+const BETA_LINK = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("Tally closed beta enquiry")}`;
+const PRIVACY_LINK = "/privacy/tally";
 
 const ASSETS = {
   icon: "/tally/icon.png",
