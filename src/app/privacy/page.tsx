@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { PRIVACY_LIST } from "@/lib/privacyNotices";
 
+export const metadata = {
+  title: "Privacy Notices | Uprise Studios",
+  description: "Privacy information for the Uprise Studios website and individual products.",
+  alternates: { canonical: "/privacy" },
+};
+
 export default function PrivacyIndex() {
   return (
     <main className="min-h-screen" style={{ background: "var(--uprise-bg)", color: "var(--uprise-ink)" }}>
