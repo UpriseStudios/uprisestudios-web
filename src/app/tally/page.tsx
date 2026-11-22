@@ -6,7 +6,7 @@ export const metadata = {
   title: "Tally — Privacy first finance | Uprise Studios",
   description:
     "A calm, privacy first way to understand your money. Local first by default, runway forecasting, recurring bills, and optional end to end encrypted sync.",
-};
+,alternates:{canonical:"/tally"}};
 
 const CONTACT_EMAIL = "tally@uprisestudios.co.uk";
 
