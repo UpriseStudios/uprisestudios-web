@@ -1,22 +1,33 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { PRIVACY_NOTICES, type AppKey } from "@/lib/privacyNotices";
 
-export default function PrivacyNoticePage({ params }: { params: { app: string } }) {
-  const key = (params.app ?? "uprise") as AppKey;
-  const notice = PRIVACY_NOTICES[key];
+type Props = { params: Promise<{ app: string }> };
 
-  if (!notice) {
-    return (
-      <main className="min-h-screen" style={{ background: "var(--uprise-bg)", color: "var(--uprise-ink)" }}>
-        <div className="mx-auto max-w-4xl px-6 py-12">
-          <Link href="/privacy" className="text-sm text-slate-700 underline hover:text-slate-900">
-            Back to privacy notices
-          </Link>
-          <h1 className="mt-6 text-2xl font-semibold">Privacy notice not found</h1>
-        </div>
-      </main>
-    );
-  }
+function findNotice(app: string) {
+  return Object.prototype.hasOwnProperty.call(PRIVACY_NOTICES, app)
+    ? PRIVACY_NOTICES[app as AppKey]
+    : undefined;
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { app } = await params;
+  const notice = findNotice(app);
+  if (!notice) return { title: "Privacy notice not found", robots: { index: false, follow: false } };
+  return {
+    title: `${notice.name} privacy notice | Uprise Studios`,
+    description: notice.summary,
+    alternates: { canonical: `/privacy/${notice.key}` },
+    ...(notice.key === "calmbet" ? { robots: { index: false, follow: true } } : {}),
+  };
+}
+
+export default async function PrivacyNoticePage({ params }: Props) {
+  const { app } = await params;
+  const notice = findNotice(app);
+
+  if (!notice) notFound();
 
   return (
     <main className="min-h-screen" style={{ background: "var(--uprise-bg)", color: "var(--uprise-ink)" }}>
