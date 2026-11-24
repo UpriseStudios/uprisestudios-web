@@ -1,4 +1,4 @@
 import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
- return {rules:[{userAgent:"*",allow:"/",disallow:["/marketplace","/marketplace/","/api/"]}],sitemap:"https://uprisestudios.co.uk/sitemap.xml"};
+ return {rules:[{userAgent:"*",allow:"/",disallow:["/marketplace","/marketplace/","/api/"]}],sitemap:"https://www.uprisestudios.co.uk/sitemap.xml"};
 }
